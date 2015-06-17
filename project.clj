@@ -3,12 +3,15 @@
   :url "http://github.com/llasram/trending-terms"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.5.1"]
-                 [com.damballa/parkour "0.5.4"]
+  :dependencies [[org.clojure/clojure "1.7.0-RC1"]
+                 [com.damballa/parkour "0.6.1"]
+                 [transduce/transduce "0.1.1"]
+
+                 [com.damballa/abracad "0.4.11"]
                  [org.apache.avro/avro "1.7.5"]
                  [org.apache.avro/avro-mapred "1.7.5"
                   :classifier "hadoop2"]
-                 [transduce/transduce "0.1.1"]]
+                 ]
   :exclusions [org.apache.hadoop/hadoop-core
                org.apache.hadoop/hadoop-common
                org.apache.hadoop/hadoop-hdfs
@@ -17,8 +20,8 @@
                org.apache.avro/avro-mapred
                org.apache.avro/avro-ipc]
   :profiles {:provided
-             {:dependencies [[org.apache.hadoop/hadoop-client "2.2.0"]
-                             [org.apache.hadoop/hadoop-common "2.2.0"]
+             {:dependencies [[org.apache.hadoop/hadoop-client "2.4.1"]
+                             [org.apache.hadoop/hadoop-common "2.4.1"]
                              [org.slf4j/slf4j-api "1.6.1"]
                              [org.slf4j/slf4j-log4j12 "1.6.1"]
                              [log4j "1.2.17"]]}
