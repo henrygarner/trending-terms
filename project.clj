@@ -11,7 +11,7 @@
                  [org.apache.avro/avro "1.7.5"]
                  [org.apache.avro/avro-mapred "1.7.5"
                   :classifier "hadoop2"]
-                 ]
+                 [com.hadoop.gplcompression/hadoop-lzo "0.4.17"]]
   :exclusions [org.apache.hadoop/hadoop-core
                org.apache.hadoop/hadoop-common
                org.apache.hadoop/hadoop-hdfs
@@ -28,4 +28,6 @@
              :test {:resource-paths ["test-resources"]}
              :aot {:aot :all, :compile-path "target/aot/classes"}
              :uberjar [:aot]
-             :jobjar [:aot]})
+             :jobjar [:aot]}
+  
+  :repositories {"twttr" "http://maven.twttr.com/"})
